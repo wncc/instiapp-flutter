@@ -7,7 +7,14 @@
     android:padding= "10dp"
     >
 
-
+    <TextView
+        android:id="@+id/hostel_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/day_text_view"

@@ -177,7 +177,7 @@ class _LostpageState extends State<LostPage> {
                                     return Center(
                                         child:
                                             CircularProgressIndicatorExtended(
-                                             label: Text("Loading..."),
+                                      label: Text("Loading..."),
                                     ));
                                   }
 

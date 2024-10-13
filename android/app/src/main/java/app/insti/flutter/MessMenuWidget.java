@@ -80,6 +80,7 @@ public class MessMenuWidget extends AppWidgetProvider {
     private static void displayMessMenu(HostelMessMenu hostelMessMenu) {
         MessMenu todaysMenu = hostelMessMenu.getSortedMessMenus().get(0);
         MessMenu tomsMenu = hostelMessMenu.getSortedMessMenus().get(1);
+        String name = hostelMessMenu.getName();
 
         int day = todaysMenu.getDay();
 
@@ -128,7 +129,7 @@ public class MessMenuWidget extends AppWidgetProvider {
         }
 
         views.setTextViewText(R.id.day_text_view, generateDayString(day));
-
+        views.setTextViewText(R.id.hostel_name, name);
         views.setTextViewText(R.id.meal_name_text_view, mealType);
         views.setTextViewText(R.id.meal_time_text_view, mealTime);
         views.setTextViewText(R.id.meal_text_view, menu);

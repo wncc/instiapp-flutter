@@ -96,8 +96,16 @@ class _MessPageState extends State<MessPage> {
                         ?..sort((h1, h2) => h1.compareTo(h2));
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children:
-                            currMess?.map(_buildSingleDayMess).toList() ?? [],
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 28.0),
+                            child: Text(
+                              "Hostel ${currHostel}",
+                              style: theme.textTheme.headline5,
+                            ),
+                          ),
+                          ...currMess?.map(_buildSingleDayMess).toList() ?? []
+                        ],
                       );
                     } else {
                       return Center(
