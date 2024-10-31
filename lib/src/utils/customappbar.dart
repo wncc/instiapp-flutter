@@ -77,7 +77,11 @@ class _CustomAppBarState extends State<CustomAppBar> {
         }));
       }
 
-      actionButtons.add(_buildIcon(Icons.notifications_outlined, () {}));
+      actionButtons.add(_buildIcon(Icons.notifications_outlined, () {
+        var navi = Navigator.of(context);
+        navi.pop();
+        navi.pushNamed('/notifications');
+      }));
 
       firstBuild = false;
     }
