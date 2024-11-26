@@ -70,7 +70,6 @@ dependencies:
 
   collection: any
   timezone: any
-  firebase_core: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -46,7 +46,7 @@ import 'package:InstiApp/src/routes/your_achievements.dart';
 import 'package:InstiApp/src/utils/app_brightness.dart';
 import 'package:InstiApp/src/utils/notif_settings.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -59,7 +59,7 @@ import 'package:uni_links/uni_links.dart';
 void main() async {
   GlobalKey<MyAppState> key = GlobalKey();
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(  );
+  // await Firebase.initializeApp(  );
   InstiAppBloc bloc = InstiAppBloc(wholeAppKey: key);
   FirebaseMessaging.onBackgroundMessage(sendMessage);
   await dotenv.load(fileName: ".env");
