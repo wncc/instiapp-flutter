@@ -13,8 +13,8 @@ class _InstiAppApi implements InstiAppApi {
     this._dio, {
     this.baseUrl,
   }) {
-    // baseUrl ??= 'https://gymkhana.iitb.ac.in/instiapp/api';
-    baseUrl ??= 'http://10.198.49.150/api';
+    baseUrl ??= 'https://gymkhana.iitb.ac.in/instiapp/api';
+    // baseUrl ??= 'http://10.198.49.150/api';
   }
 
   final Dio _dio;

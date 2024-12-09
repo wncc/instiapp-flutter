@@ -93,7 +93,7 @@ class InstiAppBloc {
   static String achievementStorageID = "achievement";
 
   // FCM handle
-  final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
+  // final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
 
   // Different Streams for the state
   ValueStream<UnmodifiableListView<Hostel>> get hostels =>
@@ -443,8 +443,8 @@ class InstiAppBloc {
   // Send FCM key
   Future<void> patchFcmKey() async {
     var req = UserFCMPatchRequest()
-      ..userAndroidVersion = 28
-      ..userFCMId = await firebaseMessaging.getToken();
+      ..userAndroidVersion = 28;
+      // ..userFCMId = await firebaseMessaging.getToken();
     var userMe = await client.patchFCMUserMe(getSessionIdHeader(), req);
     currSession?.profile = userMe;
     updateSession(currSession!);
